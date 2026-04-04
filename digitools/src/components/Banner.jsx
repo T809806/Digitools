@@ -1,27 +1,40 @@
-import React from "react";
-
-function Banner() {
+import bannerImg from "../assets/banner.png";
+const Banner = () => {
   return (
-    <section className="bg-blue-100 p-10 flex flex-col md:flex-row items-center justify-between rounded-lg mb-8">
-      <div className="md:w-1/2">
-        <h1 className="text-4xl font-bold mb-4">Welcome to DigiTools</h1>
-        <p className="text-gray-700 mb-4">
-          Build products, manage your cart, and explore amazing AI tools all in one place.
+   <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-8 py-16 bg-gray-50">
+      
+      {/* Left Side */}
+      <div className="max-w-lg">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
+          Supercharge Your Digital Workflow 🚀
+        </h1>
+
+        <p className="mt-4 text-gray-600">
+          Access premium AI tools, design assets, templates, and productivity software—all in one place.
         </p>
-        <div className="flex gap-4">
-          <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-            Get Started
+
+        <div className="mt-6 flex gap-4">
+          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            Explore Products
           </button>
-          <button className="bg-white border border-blue-500 text-blue-500 px-4 py-2 rounded hover:bg-blue-100">
-            Learn More
+
+          <button className="border border-gray-400 px-6 py-3 rounded-lg hover:bg-gray-100">
+            Watch Demo
           </button>
         </div>
       </div>
-      <div className="md:w-1/2 mt-6 md:mt-0">
-        <img src="https://via.placeholder.com/400x250" alt="Banner" className="rounded-lg shadow"/>
+
+      {/* Right Side Image */}
+      <div className="mt-10 md:mt-0">
+        <img
+  src={bannerImg}
+  alt="banner"
+  className="w-72 md:w-96"
+/>
       </div>
-    </section>
+
+    </div>
   );
-}
+};
 
 export default Banner;

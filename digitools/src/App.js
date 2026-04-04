@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import Stats from "./components/Stats";
 import MainSection from "./components/MainSection";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
@@ -13,7 +15,10 @@ function App() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Navbar */}
+      
       <Navbar cartCount={cart.length} />
+<Banner />
+<Stats />
 
       {/* Main Products Section */}
       <main className="flex-grow">

@@ -1,22 +1,37 @@
-import React from "react";
-
-function Stats() {
+const Stats = () => {
   return (
-    <section className="flex justify-around bg-white p-8 rounded-lg shadow mb-8">
-      <div className="text-center">
-        <p className="text-2xl font-bold">100+</p>
-        <p className="text-gray-600">Templates</p>
+    <div className="bg-gray-50 py-12 px-8">
+
+      <div className="flex flex-col md:flex-row justify-center items-center text-center gap-8">
+
+        {/* Stat 1 */}
+        <div className="px-8">
+          <h2 className="text-4xl font-bold text-blue-600">50K+</h2>
+          <p className="text-gray-600 mt-2">Active Users</p>
+        </div>
+
+        {/* Divider */}
+        <div className="hidden md:block h-12 w-[1px] bg-gray-300"></div>
+
+        {/* Stat 2 */}
+        <div className="px-8">
+          <h2 className="text-4xl font-bold text-blue-600">200+</h2>
+          <p className="text-gray-600 mt-2">Premium Tools</p>
+        </div>
+
+        {/* Divider */}
+        <div className="hidden md:block h-12 w-[1px] bg-gray-300"></div>
+
+        {/* Stat 3 */}
+        <div className="px-8">
+          <h2 className="text-4xl font-bold text-blue-600">4.9</h2>
+          <p className="text-gray-600 mt-2">Rating</p>
+        </div>
+
       </div>
-      <div className="text-center">
-        <p className="text-2xl font-bold">24/7</p>
-        <p className="text-gray-600">Support</p>
-      </div>
-      <div className="text-center">
-        <p className="text-2xl font-bold">500+</p>
-        <p className="text-gray-600">Users</p>
-      </div>
-    </section>
+
+    </div>
   );
-}
+};
 
 export default Stats;
