@@ -1,40 +1,83 @@
-import React from "react";
+import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-blue-500 text-white py-8 mt-8">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* About */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">DigiTools</h3>
-          <p>All-in-one AI tools for designers, marketers, and creators.</p>
+    <footer className="bg-[#101727] text-white py-10 px-6">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between md:items-start gap-10">
+
+       
+        <div className="md:w-1/4 text-left">
+          <h2 className="text-2xl font-bold">DigiTools</h2>
+          <p className="mt-2 text-gray-400">
+            Premium digital tools for creators.
+          </p>
         </div>
 
-        {/* Links */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Pricing</li>
-            <li>Contact</li>
-          </ul>
+       
+        <div className="md:w-1/2 grid grid-cols-3 gap-6 text-left">
+         
+          <div>
+            <h3 className="font-semibold mb-2">Product</h3>
+            <ul className="text-gray-400 space-y-1">
+              <li>Features</li>
+              <li>Pricing</li>
+              <li>Templates</li>
+              <li>Integration</li>
+            </ul>
+          </div>
+
+        
+          <div>
+            <h3 className="font-semibold mb-2">Company</h3>
+            <ul className="text-gray-400 space-y-1">
+              <li>About</li>
+              <li>Blog</li>
+              <li>Careers</li>
+              <li>Press</li>
+            </ul>
+          </div>
+
+         
+          <div>
+            <h3 className="font-semibold mb-2">Resources</h3>
+            <ul className="text-gray-400 space-y-1">
+              <li>Documentation</li>
+              <li>Help Center</li>
+              <li>Community</li>
+              <li>Contact</li>
+            </ul>
+          </div>
         </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">Contact</h3>
-          <p>Email: support@digitools.com</p>
-          <p>Phone: +880 1234 567890</p>
+      
+        <div className="md:w-1/4 text-left md:text-right">
+          <h3 className="font-semibold mb-2"> Social Links </h3>
+          <div className="flex gap-4 mt-2 justify-start md:justify-end">
+            <a href="#" className="hover:text-pink-500"><FaInstagram /></a>
+            <a href="#" className="hover:text-blue-500"><FaFacebookF /></a>
+          <a href="#" className="hover:text-blue-700"><FaLinkedinIn /></a>
+          </div>
         </div>
+
       </div>
 
-      {/* Bottom */}
-      <div className="text-center mt-6 text-sm">
-        © 2026 DigiTools. All rights reserved.
+      
+      <hr className="border-gray-700 my-6" />
+
+     
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm gap-4">
+      
+        <p>© 2026 DigiTools. All rights reserved.</p>
+
+    
+        <div className="flex gap-4">
+          <a href="#" className="hover:text-white">Privacy Policy</a>
+          <a href="#" className="hover:text-white">Terms of Service</a>
+          <a href="#" className="hover:text-white">Cookies</a>
+        </div>
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

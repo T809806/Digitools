@@ -1,30 +1,91 @@
 const products = [
   {
     id: 1,
-    name: "AI Writing Pro",
-    description: "Generate content with AI",
-    price: 29,
+    name: "Pro Resume Builder",
+    description: "Create professional resumes quickly with ATS optimization.",
+    price: 29.99,
     period: "monthly",
     tag: "Best Seller",
-    features: ["AI content", "Templates", "Grammar check"]
+    tagType: "best_seller",
+    features: ["100+ templates", "ATS optimization", "Export to PDF"],
+    icon: "💼"
   },
   {
     id: 2,
-    name: "Design Templates",
-    description: "2000+ templates",
-    price: 49,
-    period: "one-time",
-    tag: "Popular",
-    features: ["Templates", "Commercial use"]
+    name: "AI Design Toolkit",
+    description: "Design stunning graphics using AI-powered tools.",
+    price: 49.99,
+    period: "monthly",
+    tag: "New",
+    tagType: "new",
+    features: ["Template library", "Drag & Drop editor", "Social media integration"],
+    icon: "🎨"
   },
   {
     id: 3,
-    name: "Stock Assets",
-    description: "Millions of assets",
-    price: 19,
+    name: "Marketing Analytics Pro",
+    description: "Get insights into your campaigns with real-time analytics.",
+    price: 99.99,
+    period: "yearly",
+    tag: "Popular",
+    tagType: "popular",
+    features: ["Real-time reports", "Custom dashboards", "Export CSV"],
+    icon: "📊"
+  },
+  {
+    id: 4,
+    name: "Social Media Scheduler",
+    description: "Plan and schedule your posts across multiple platforms.",
+    price: 19.99,
+    period: "monthly",
+    tag: "Best Seller",
+    tagType: "best_seller",
+    features: ["Auto posting", "Calendar view", "Analytics integration"],
+    icon: "📅"
+  },
+  {
+    id: 5,
+    name: "E-commerce Booster",
+    description: "Increase sales with AI-driven recommendations.",
+    price: 149.99,
+    period: "one-time",
+    tag: "New",
+    tagType: "new",
+    features: ["Product suggestions", "Upsell features", "Email campaigns"],
+    icon: "🛒"
+  },
+  {
+    id: 6,
+    name: "Video Editor AI",
+    description: "Edit videos quickly using AI templates and effects.",
+    price: 39.99,
+    period: "monthly",
+    tag: "Popular",
+    tagType: "popular",
+    features: ["Auto-cut scenes", "Filters & effects", "Export HD video"],
+    icon: "🎬"
+  },
+  {
+    id: 7,
+    name: "AI Chat Assistant",
+    description: "Boost customer support with AI-powered chatbots.",
+    price: 59.99,
+    period: "monthly",
+    tag: "Best Seller",
+    tagType: "best_seller",
+    features: ["Multi-language support", "24/7 AI support", "Analytics dashboard"],
+    icon: "🤖"
+  },
+  {
+    id: 8,
+    name: "Content Writer Pro",
+    description: "Generate SEO-friendly content in seconds.",
+    price: 24.99,
     period: "monthly",
     tag: "New",
-    features: ["Photos", "Videos"]
+    tagType: "new",
+    features: ["AI content suggestions", "Plagiarism check", "Export to Word"],
+    icon: "✍️"
   }
 ];
 

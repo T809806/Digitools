@@ -1,40 +1,38 @@
-import React from "react";
-
-function Footer() {
+const Pricing = () => {
   return (
-    <footer className="bg-blue-500 text-white py-8 mt-8">
-      <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {/* About */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">DigiTools</h3>
-          <p>All-in-one AI tools for designers, marketers, and creators.</p>
+    <div className="py-16 px-6 bg-gray-50 text-center">
+      
+      <h2 className="text-3xl font-bold mb-10">
+        Simple Pricing
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        {/* Starter */}
+        <div className="p-6 border rounded-lg">
+          <h3 className="text-xl font-bold">Starter</h3>
+          <p className="text-2xl mt-2">$0</p>
+          <p className="mt-2">Basic features</p>
         </div>
 
-        {/* Links */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">Quick Links</h3>
-          <ul>
-            <li>Home</li>
-            <li>Products</li>
-            <li>Pricing</li>
-            <li>Contact</li>
-          </ul>
+        {/* Pro */}
+        <div className="p-6 border rounded-lg bg-blue-600 text-white">
+          <h3 className="text-xl font-bold">Pro</h3>
+          <p className="text-2xl mt-2">$29/mo</p>
+          <p className="mt-2">All premium tools</p>
         </div>
 
-        {/* Contact */}
-        <div>
-          <h3 className="font-bold text-lg mb-2">Contact</h3>
-          <p>Email: support@digitools.com</p>
-          <p>Phone: +880 1234 567890</p>
+        {/* Enterprise */}
+        <div className="p-6 border rounded-lg">
+          <h3 className="text-xl font-bold">Enterprise</h3>
+          <p className="text-2xl mt-2">$99/mo</p>
+          <p className="mt-2">Team features</p>
         </div>
+
       </div>
 
-      {/* Bottom */}
-      <div className="text-center mt-6 text-sm">
-        © 2026 DigiTools. All rights reserved.
-      </div>
-    </footer>
+    </div>
   );
-}
+};
 
-export default Footer;
+export default Pricing;

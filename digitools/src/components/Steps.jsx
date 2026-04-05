@@ -1,44 +1,32 @@
-import React from "react";
-
-const stepsData = [
-  {
-    id: 1,
-    title: "Choose a Product",
-    description: "Select from our wide range of AI-powered tools.",
-    icon: "🛒",
-  },
-  {
-    id: 2,
-    title: "Add to Cart",
-    description: "Easily add your selected products to the cart.",
-    icon: "🛍️",
-  },
-  {
-    id: 3,
-    title: "Checkout",
-    description: "Proceed to checkout and enjoy your products.",
-    icon: "💳",
-  },
-];
-
-function Steps() {
+const Steps = () => {
   return (
-    <div className="my-8 p-4">
-      <h2 className="text-2xl font-bold mb-6 text-center">How It Works</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        {stepsData.map((step) => (
-          <div
-            key={step.id}
-            className="border rounded-lg p-6 text-center shadow hover:shadow-lg transition"
-          >
-            <div className="text-5xl mb-4">{step.icon}</div>
-            <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-            <p className="text-gray-600">{step.description}</p>
-          </div>
-        ))}
+    <div className="py-16 px-6 bg-white text-center">
+      
+      <h2 className="text-3xl font-bold mb-10">
+        Get Started in 3 Steps
+      </h2>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+        <div className="p-6 shadow rounded-lg">
+          <h3 className="text-xl font-semibold mb-2">01</h3>
+          <p>Create Account</p>
+        </div>
+
+        <div className="p-6 shadow rounded-lg">
+          <h3 className="text-xl font-semibold mb-2">02</h3>
+          <p>Choose Products</p>
+        </div>
+
+        <div className="p-6 shadow rounded-lg">
+          <h3 className="text-xl font-semibold mb-2">03</h3>
+          <p>Start Creating</p>
+        </div>
+
       </div>
+
     </div>
   );
-}
+};
 
 export default Steps;
