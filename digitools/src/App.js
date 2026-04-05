@@ -14,13 +14,15 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Navbar */}
-      
-      <Navbar cartCount={cart.length} />
-<Banner />
-<Stats />
 
-      {/* Main Products Section */}
+      {/* Navbar */}
+      <Navbar cartCount={cart.length} />
+
+      {/* Hero Section */}
+      <Banner />
+      <Stats />
+
+      {/* Main Content */}
       <main className="flex-grow">
         <MainSection cart={cart} setCart={setCart} />
         <Steps />
@@ -34,14 +36,8 @@ function App() {
       <ToastContainer
         position="top-right"
         autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
       />
+
     </div>
   );
 }

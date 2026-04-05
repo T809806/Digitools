@@ -1,26 +1,34 @@
-import React from "react";
+import { toast } from "react-toastify";
 
-function ProductCard({ product }) {
+const ProductCard = ({ product, addToCart }) => {
   return (
-    <div className="border rounded-lg p-4 shadow hover:shadow-lg transition">
-      <div className="flex justify-between items-center mb-2">
-        <h2 className="text-lg font-bold">{product.name}</h2>
-        <span>{product.icon}</span>
-      </div>
-      <p className="text-sm text-gray-600 mb-2">{product.description}</p>
-      <p className="font-semibold mb-1">Price: ${product.price}</p>
-      <p className="text-sm mb-1">Period: {product.period}</p>
-      <p className="text-sm mb-1">Tag: {product.tagType}</p>
-      <ul className="text-sm mb-2">
-        {product.features.map((feat, index) => (
-          <li key={index}>• {feat}</li>
+    <div className="border p-4 rounded-lg shadow hover:shadow-lg">
+      
+      <h2 className="text-lg font-bold">{product.name}</h2>
+      <p className="text-gray-600 text-sm mt-1">{product.description}</p>
+
+      <p className="mt-2 font-semibold">
+        ${product.price} / {product.period}
+      </p>
+
+      <ul className="text-sm mt-2">
+        {product.features.map((f, i) => (
+          <li key={i}>• {f}</li>
         ))}
       </ul>
-      <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+
+      <button
+        onClick={() => {
+          addToCart(product);
+          toast("Added to cart");
+        }}
+        className="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+      >
         Buy Now
       </button>
+
     </div>
   );
-}
+};
 
 export default ProductCard;
