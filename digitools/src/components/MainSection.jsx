@@ -21,11 +21,10 @@ const MainSection = ({ cart, setCart }) => {
   return (
     <div className="py-16 px-6 bg-white">
 
-      {/* 🔘 Toggle Buttons (CENTERED + STYLED) */}
+   
       <div className="flex justify-center mb-10">
         <div className="bg-gray-100 p-1 rounded-full flex">
 
-          {/* Product Button */}
           <button
             onClick={() => setView("product")}
             className={`px-6 py-2 rounded-full text-sm font-medium transition 
@@ -38,7 +37,7 @@ const MainSection = ({ cart, setCart }) => {
             Product
           </button>
 
-          {/* Cart Button */}
+        
           <button
             onClick={() => setView("cart")}
             className={`px-6 py-2 rounded-full text-sm font-medium transition 
@@ -54,8 +53,7 @@ const MainSection = ({ cart, setCart }) => {
         </div>
       </div>
 
-      {/* 🛍️ Product Section */}
-      {view === "product" && (
+       {view === "product" && (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {products.map((p) => (
             <ProductCard key={p.id} product={p} addToCart={addToCart} />
@@ -63,13 +61,11 @@ const MainSection = ({ cart, setCart }) => {
         </div>
       )}
 
-      {/* 🛒 Cart Section */}
+     
       {view === "cart" && (
         <div className="max-w-3xl mx-auto">
           {cart.length === 0 ? (
-            <p className="text-center text-gray-500 text-lg">
-              Your cart is empty 🛒
-            </p>
+            <p className="text-center text-gray-500 text-lg"> Your cart is empty 🛒</p>
           ) : (
             <Cart
               cart={cart}

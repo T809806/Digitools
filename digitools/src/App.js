@@ -14,29 +14,20 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col">
-
-      {/* Navbar */}
-      <Navbar cartCount={cart.length} />
-
-      {/* Hero Section */}
-      <Banner />
-      <Stats />
-
-      {/* Main Content */}
-      <main className="flex-grow">
+        <Navbar cartCount={cart.length} />
+        <Banner />
+        <Stats />
+    <main className="flex-grow">
         <MainSection cart={cart} setCart={setCart} />
         <Steps />
         <Pricing />
-      </main>
+    </main>
+        <Footer />
 
-      {/* Footer */}
-      <Footer />
-
-      {/* Toast Notifications */}
-      <ToastContainer
+    <ToastContainer
         position="top-right"
         autoClose={2000}
-      />
+    />
 
     </div>
   );
